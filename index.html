@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--
+part 2 - html & css with navBar
+! not m.first !!! nav to hamburger
+-->
+<html>
+    <head>
+        <title>sticky navigation - pure CSS - no JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+        <style>
+            body{
+                margin : 0;
+                padding: 0;
+                font-family: sans serif;
+                background-color: #000;
+                color:#fff;
+            }
+            header {
+                box-sizing: border-box;
+                text-align: center;
+            }
+            section{
+                width: 100%;
+                height: 100vh; /* */
+            }
+            section.sec1{
+                background: url(img1.jpg);
+                background-size: cover;
+            }
+            section.sec2, section.sec4, section.sec6{
+                padding: 5px;
+                box-sizing: border-box;
+                height: auto;
+            }
+            section.sec2 h3, section.sec4 h3, section.sec6 h3{
+                font-size: 3em;
+                margin : 0;
+                padding: 0;
+                color: #fff;
+            }
+            section.sec2 p, section.sec6 p,  section.sec6 p a{
+                font-size: 1.4em;
+                margin : 0;
+                padding: 0;
+                color: #fff;  
+            }
+            section.sec4 ol, section.sec6 ol  {
+                font-size: 1.4em;
+                margin : 0;
+                padding: 0;
+                color: #fff;  
+            }
+            section.sec4 ol li a, section.sec6 ol li a {
+                font-size: 1.4em;
+                margin : 0;
+                padding: 0;
+                color: #fff;  
+            }
+
+
+
+         
+            section.sec3{
+                background: url(img2.jpg);
+                background-size: cover;
+            }
+            section.sec5{
+                background: url(img3.jpg);
+                background-size: cover;
+            }
+
+            /* MENU */
+            nav{
+                width: 100%;
+                height:50px;
+                background: rgba(0,0,0,.8);
+                border-top: 1px solid rgba(255,255,255,.2);
+                border-bottom: 1px solid rgba(255,255,255,.2);
+                /* STICKY effect*/
+                position: sticky;
+                top: 0;
+            }
+            nav ul{
+                display: flex; 
+                margin : 0;
+                padding: 0 100px;
+                float: right;
+            }
+            nav ul li{
+                list-style: none;
+            }
+            nav ul li a{
+                display: block;
+                color: #fff;
+                padding: 0 20px;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: bold;  
+                line-height: 50px; /*height de nav*/
+            }
+            nav ul li a.active, nav ul li a:hover{
+            background:violet;
+            }
+            /*Change la couleur des liens de la section 6 */
+            section.sec6 a{
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <img src="logo.png" alt="logo">
+            <h1>MEGGAROU Moncif CV</h1>
+            <p> Ordonné, Sociable, Ponctuel</p>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">MM</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="sec1"></section>
+        <section class="sec2" id="cv">
+            <h2>Mon expérience</h2>
+            <ul>
+                <li> Stagiaire au Fonds du logment Bruxellois</li>
+                <li> Employé bureautique</li>
+                <li> Stagiaire au Contrat de Société et de Prévention</li>
+            </ul>
+
+        </section>
+        <section class="sec3"></section>
+        <section class="sec4">
+            <h2>Mes compétences</h2>
+            <ul>
+                <li> Tapez un texte à 10 doigts</li>
+                <li> Répondre au téléphone</li>
+                <li> Accueil des Visiteurs</li>
+
+
+
+            </ul>
+
+
+
+            <h2>Ma Formation</h2>
+            <ul>
+                <li>Formation en employé bureautique au CEFAID</li>
+                <li>Formation en Néerlandais (Bruxelles Formation)</li>
+                <li>Institut Saint-Vincent de Paul</li>
+
+
+
+            </ul>
+
+        </section>
+        <section class="sec5"></section>
+        <section class="sec6" id="contact">
+
+            <h2>
+                contact:
+            </h2>
+            <a href="mailto:moncif08@hotmail.com">moncif08@hotmail.com </a>
+            <a href="tel:0484619429">appelez-moi</a>
+
+        
+    </section>
+
+    <!--
+    Credit image 
+    Image by <a href="https://pixabay.com/users/sasint-3639875/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1822614">Sasin Tipchai</a> 
+    -->
+
+</body>
+</html>
